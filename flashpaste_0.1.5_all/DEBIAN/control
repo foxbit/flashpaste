@@ -1,0 +1,11 @@
+Package: io.github.angelorosa.flashpaste
+Version: 0.1.5
+Section: utils
+Priority: optional
+Architecture: all
+Depends: python3, python3-gi, python3-requests, gir1.2-gtk-4.0, gir1.2-adw-1
+Maintainer: Angelo Rosa
+Description: FlashPaste - Manage temporary text snippets
+ FlashPaste is a native Linux application for management of temporary
+ text snippets with Pastebin integration.
+ It features a 24-hour expiration for local snippets and allows publishing to Pastebin.

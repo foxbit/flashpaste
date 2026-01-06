@@ -1,0 +1,62 @@
+{
+    "app-id": "io.github.angelorosa.flashpaste",
+    "runtime": "org.gnome.Platform",
+    "runtime-version": "46",
+    "sdk": "org.gnome.Sdk",
+    "command": "flashpaste",
+    "finish-args": [
+        "--share=network",
+        "--share=ipc",
+        "--socket=fallback-x11",
+        "--socket=wayland",
+        "--filesystem=xdg-run/dconf",
+        "--own-name=org.gnome.*"
+    ],
+    "modules": [
+        {
+            "name": "python3-requests",
+            "buildsystem": "simple",
+            "build-commands": [
+                "pip3 install --prefix=/app --no-deps ."
+            ],
+            "sources": [
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/43/82/61be5de20b8f044ef6c7d9bc662580c885994236b9986b62cefb44dc922f/certifi-2024.12.14-py3-none-any.whl",
+                    "sha256": "3ce314b1ce33a040b9557993a4087e3f88f8d693f9c3ff411470df04473855ff"
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/2d/87/e64e16d564ce826ec49b292e92c64d858349a1d4b6848fc76974d6f4460f/charset_normalizer-3.4.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+                    "sha256": "4ce2289f81da750fc6598c4333b22e11a141c2c36696ceb09f4007f3549fb2a4"
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/d6/92/757ea1b8ac532655bf51b6dc2453e920d3c19e52e50c4391e84a298be013/idna-3.10-py3-none-any.whl",
+                    "sha256": "946d195a0d259cbba61165e88e65941f16e9b36ea6ddb97f00452bae8b1287d3"
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/db/fe/209c379a5d7c862bc343a41e976800742f518e9323145455f5f7dc0b2401/urllib3-2.3.0-py3-none-any.whl",
+                    "sha256": "199f7d268d09f7a6f23fcfce980ceca9c313a2963f45c8c538cb3c0b11568288"
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/f9/9b/335f9764261e915ed497fcdeb11df5dfd6f7bf257d4a6a2a686d80da4d54/requests-2.32.3-py3-none-any.whl",
+                    "sha256": "70761cfe03c773ceb22aa2f671b4757976145175cdfca138c63dbf5a66712046"
+                }
+            ]
+        },
+        {
+            "name": "flashpaste",
+            "builddir": true,
+            "buildsystem": "meson",
+            "sources": [
+                {
+                    "type": "dir",
+                    "path": "."
+                }
+            ]
+        }
+    ]
+}

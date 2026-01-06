@@ -1,0 +1,15 @@
+#!@PYTHON@
+import sys
+import os
+import signal
+
+# Set up path to find local modules
+pkgdatadir = '@pkgdatadir@'
+sys.path.insert(0, pkgdatadir)
+
+from src.main import main
+
+if __name__ == '__main__':
+    # Handle Ctrl+C gracefully
+    signal.signal(signal.SIGINT, signal.SIG_DFL)
+    sys.exit(main())

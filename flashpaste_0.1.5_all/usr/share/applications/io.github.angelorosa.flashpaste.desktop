@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=FlashPaste
+Comment=Manage temporary text snippets
+Exec=flashpaste
+Icon=edit-paste-symbolic
+Terminal=false
+Type=Application
+Categories=Utility;GTK;
+StartupNotify=true
+ID=io.github.angelorosa.flashpaste

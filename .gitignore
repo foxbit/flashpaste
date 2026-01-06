@@ -1,0 +1,11 @@
+build_deb/
+_build/
+builddir/
+*.deb
+__pycache__/
+*.pyc
+.flatpak-builder/
+.vscode/
+*.egg-info/
+dist/
+.DS_Store
